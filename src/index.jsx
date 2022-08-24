@@ -9,6 +9,7 @@ const defaultBorderWidth = 1;
 const optionalStyleProps = {
     borderColor: PropTypes.string,
     borderStyle: PropTypes.string,
+    borderImage: PropTypes.string,
     borderWidth: PropTypes.number,
     className: PropTypes.string,
     zIndex: PropTypes.number,
@@ -229,6 +230,7 @@ export class Line extends PureComponent {
         };
 
         const defaultStyle = {
+            borderImage: this.props.borderImage || '',
             borderTopColor: this.props.borderColor || defaultBorderColor,
             borderTopStyle: this.props.borderStyle || defaultBorderStyle,
             borderTopWidth: this.props.borderWidth || defaultBorderWidth,
