@@ -162,6 +162,7 @@ var defaultBorderWidth = 1;
 var optionalStyleProps = {
   borderColor: (prop_types__WEBPACK_IMPORTED_MODULE_0___default().string),
   borderStyle: (prop_types__WEBPACK_IMPORTED_MODULE_0___default().string),
+  borderImage: (prop_types__WEBPACK_IMPORTED_MODULE_0___default().string),
   borderWidth: (prop_types__WEBPACK_IMPORTED_MODULE_0___default().number),
   className: (prop_types__WEBPACK_IMPORTED_MODULE_0___default().string),
   zIndex: (prop_types__WEBPACK_IMPORTED_MODULE_0___default().number)
@@ -477,6 +478,7 @@ var Line = /*#__PURE__*/function (_PureComponent) {
         transformOrigin: '0 0'
       };
       var defaultStyle = {
+        borderImage: this.props.borderImage || '',
         borderTopColor: this.props.borderColor || defaultBorderColor,
         borderTopStyle: this.props.borderStyle || defaultBorderStyle,
         borderTopWidth: this.props.borderWidth || defaultBorderWidth
@@ -544,10 +546,6 @@ var SteppedLine = /*#__PURE__*/function (_PureComponent2) {
         }));
       }
 
-      if (dx === 0) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(Line, this.props);
-      }
-
       var borderWidth = this.props.borderWidth || defaultBorderWidth;
       var y2 = Math.round((y0 + y1) / 2);
       var xOffset = dx > 0 ? borderWidth : 0;
@@ -588,10 +586,6 @@ var SteppedLine = /*#__PURE__*/function (_PureComponent2) {
           x1: x1,
           y1: y0
         }));
-      }
-
-      if (dy === 0) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(Line, this.props);
       }
 
       var borderWidth = this.props.borderWidth || defaultBorderWidth;
