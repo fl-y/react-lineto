@@ -68,6 +68,10 @@ declare module 'react-lineto' {
          */
         borderWidth?: number;
         /**
+         * Border image import
+         */
+        borderImage?: string;
+        /**
          * Desired CSS className for the rendered element
          */
         className?: string;
